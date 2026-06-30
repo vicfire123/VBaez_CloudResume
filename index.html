@@ -108,6 +108,29 @@
         </section>
 
     </main>
+    <p>This page has been viewed <span id="counter">0</span> times.</p>
+    <script>window.addEventListener('DOMContentLoaded', () => {
+    getVisitCount();
+
+const functionApi = 'https://resume-api-vbaez-epduahbjcwa9ddaj.eastus-01.azurewebsites.net/api/GetResumeCounter';
+
+const getVisitCount = () => {
+    fetch(functionApi)
+        .then(response => {
+            return response.json();
+        })
+        .then(response => {
+            console.log("Website called function API successfully.");
+            const count = response.count;
+            document.getElementById('counter').innerText = count;
+        })
+        .catch(function(error) {
+            console.log("Error fetching counter data: ", error);
+        });
+    return count;
+    }
+});
+</script>
 
 </body>
 </html>
