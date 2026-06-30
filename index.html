@@ -109,11 +109,11 @@
 
     </main>
     <p>This page has been viewed <span id="counter">0</span> times.</p>
-    <script>window.addEventListener('DOMContentLoaded', () => {
-    getVisitCount();
-
+<script>
+// 1. Define the API endpoint URL variable first
 const functionApi = 'https://resume-api-vbaez-epduahbjcwa9ddaj.eastus-01.azurewebsites.net/api/GetResumeCounter';
 
+// 2. Define the execution function second
 const getVisitCount = () => {
     fetch(functionApi)
         .then(response => {
@@ -127,8 +127,11 @@ const getVisitCount = () => {
         .catch(function(error) {
             console.log("Error fetching counter data: ", error);
         });
-    return count;
-    }
+}
+
+// 3. Finally, fire the function once the webpage structure finishes loading
+window.addEventListener('DOMContentLoaded', () => {
+    getVisitCount();
 });
 </script>
 
