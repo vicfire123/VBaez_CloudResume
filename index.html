@@ -90,40 +90,41 @@
         </section>
 
         <section id="projects">
-            <h2>Homelab & Projects</h2>
+            <h2>Projects</h2>
 
             <article class="project">
-                <h3>potofgreed — Home Server</h3>
-                <p>Repurposed a Dell Latitude 7400 as an Ubuntu Server 24.04 home server, SSH hardened to Ed25519 key-only access. Runs a full 9-container Docker media stack, verified through a full reboot: Gluetun/NordVPN-routed qBittorrent, Prowlarr, Sonarr, Radarr, Jellyfin (Intel Quick Sync hardware transcoding), FlareSolverr, plus Uptime Kuma and Nextcloud.</p>
+                <h3>Azure and M365 Automation Toolkit (PowerShell)</h3>
+                <p>Six scripts that audit Azure and Microsoft 365 environments for waste and security drift: an orphaned-resource scanner that flags unattached disks, NICs, and public IPs with monthly cost estimates and an HTML report; an Entra ID security audit; stale Intune device detection; unused M365 license recovery; app secret and certificate expiry alerts; and stopped-service reporting. Built on the Az and Microsoft Graph modules, with -WhatIf and -Confirm safeguards on anything destructive.</p>
+            </article>
+
+            <article class="project">
+                <h3>ATS Pro - Resume Scanning SaaS</h3>
+                <p>Production freemium SaaS designed, built, and deployed on Azure Static Web Apps with a custom domain. Node.js API backend with Clerk authentication (Google sign-in), live Stripe payments, and Anthropic API integration for AI resume scoring, cover letter generation, and headline optimization. Rate limiting across scan, AI, and checkout endpoints; free tier gated to scores and top issues, paid tier unlocks scan history and the generators.</p>
+            </article>
+
+            <article class="project">
+                <h3>potofgreed - Home Server and Infrastructure Lab</h3>
+                <p>Ubuntu Server 24.04 on a Dell Latitude 7400, hardened with Ed25519 key-only SSH. Runs a Docker Compose stack - media automation, Nextcloud, Uptime Kuma monitoring - on a single-mount hardlink storage layout, plus a custom monitoring dashboard (FastAPI backend, nginx frontend) tracking host health, container status, and server activity. Remote access over Tailscale only.</p>
             </article>
 
             <article class="project">
                 <h3>Minecraft Server</h3>
-                <p>Host a Dockerized Paper Minecraft server with 17 plugins and Geyser/Floodgate Bedrock cross-play, served to friends over the private Tailscale network with a BlueMap web map.</p>
+                <p>Dockerized Paper server with Geyser/Floodgate Bedrock cross-play, 17 plugins, and a BlueMap web map. Nightly automated backups with 7-day retention; private, invite-only access over Tailscale.</p>
             </article>
 
             <article class="project">
                 <h3>Local AI Stack</h3>
-                <p>Ollama running on an RTX 5070 12GB gaming PC with Qwen3 14B fully on the GPU, fronted by Open WebUI in Docker. Used for cloud certification study, technical drafting, and coding assistance through Continue.dev in VS Code.</p>
-            </article>
-
-            <article class="project">
-                <h3>Cloud Resume — This Site</h3>
-                <p>Deployed to Azure Static Web Apps (free tier) straight from GitHub with automatic CI/CD. Code lives on <a href="https://github.com/vicfire123/VBaez_CloudResume" target="_blank">GitHub</a>.</p>
-            </article>
-
-            <article class="project">
-                <h3>Pi-hole</h3>
-                <p>Previously ran network-wide DNS filtering for ad and tracker blocking.</p>
+                <p>Ollama and Open WebUI in Docker on an RTX 5070 (12GB), running Qwen3 14B and Gemma 4 locally for certification study, technical drafting, and coding assistance through Continue.dev in VS Code.</p>
             </article>
         </section>
 
         <section id="skills">
             <h2>Technical Skills</h2>
             <ul>
-                <li><strong>Cloud & Identity Infrastructure:</strong> Microsoft Azure, Entra ID, Hybrid Active Directory, RBAC, MFA, SSO, Bicep, Azure Backup / Recovery Services, SSH</li>
-                <li><strong>Systems & ITSM Platforms:</strong> Microsoft Intune (MDM), Windows OS, Linux, Python, Docker, OSD Provisioning, PXE Boot, MDT, ServiceNow, ManageEngine, ITIL</li>
-                <li><strong>Developing:</strong> Cisco Umbrella, SQL hash keys</li>
+                <li><strong>Cloud and identity:</strong> Microsoft Azure (virtual machines, Recovery Services, Azure Backup, SQL Managed Instance), Bicep, Entra ID, Active Directory, Microsoft 365, Microsoft Intune, MFA, SSO, RBAC</li>
+                <li><strong>Automation:</strong> PowerShell, Microsoft Graph, Bash, Git and GitHub</li>
+                <li><strong>Systems and deployment:</strong> Windows, Ubuntu Server, Docker and Docker Compose, nginx, SSH, PXE, OSD, MDT</li>
+                <li><strong>Support platforms:</strong> ServiceNow, ManageEngine</li>
             </ul>
         </section>
 
