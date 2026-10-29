@@ -45,7 +45,7 @@
                 <ul>
                     <li>Audited VM backup coverage across two managed Azure subscriptions and closed the gap: enabled Azure Backup on 16 unprotected VMs, raising coverage from 11 to 27 of 31 VMs, and verified the first recovery points landed.</li>
                     <li>Configured an Azure Recovery Services vault with a backup policy protecting a SQL Managed Instance (scheduled backups and retention).</li>
-                    <li>Deployed 10 virtual machines using a parameterized Bicep template adapted to stamp out multiple VM configurations with unique names; configured SSH key-based authentication for the SQL Server VM during provisioning.</li>
+                    <li>Deployed 10 virtual machines using a parameterized Bicep template; configured SSH key-based authentication for secure access to the SQL Server VM during provisioning.</li>
                     <li>Set up Azure Service Health alerting across both managed subscriptions (all services, regions, and event types) with a shared action group notifying the operations team.</li>
                     <li>Wrote a report-only PowerShell audit of storage-account backup coverage across both subscriptions (all 5 accounts on native protection only, no vault backup); adopted into the team's IT toolkit.</li>
                 </ul>
@@ -97,7 +97,7 @@
 
             <article class="project">
                 <h3>Azure and M365 Automation Toolkit (PowerShell)</h3>
-                <p>Six scripts that audit Azure and Microsoft 365 environments for waste and security drift: an orphaned-resource scanner that flags unattached disks, NICs, and public IPs with monthly cost estimates and an HTML report; an Entra ID security audit; stale Intune device detection; unused M365 license recovery; app secret and certificate expiry alerts; and stopped-service reporting. Built on the Az and Microsoft Graph modules, with -WhatIf and -Confirm safeguards on anything destructive.</p>
+                <p>Eight PowerShell scripts that audit Azure and Microsoft 365 environments for waste, backup coverage, and security drift: an orphaned-resource scanner that flags unattached disks, NICs, and public IPs with cost estimates and an HTML report; VM and storage-account backup coverage audits; an Entra ID security audit; stale Intune device detection; unused M365 license recovery; app secret and certificate expiry alerts; and stopped-service reporting - plus a Teams cache reset batch file in live testing with the helpdesk team. Built on the Az and Microsoft Graph modules, with -WhatIf and -Confirm safeguards on anything destructive.</p>
             </article>
 
             <article class="project">
