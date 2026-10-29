@@ -26,8 +26,9 @@
             <h2>Summary</h2>
             <p>
                 Azure Cloud Specialist and Microsoft Certified Azure Administrator with 5+ years in enterprise IT.
-                Doing real cloud work now - Recovery Services backup vaults, Bicep template VM deployments, SQL Managed
-                Instance protection - on top of years of hands-on administration: AD group access, MFA resets, MDM enrollments.
+                Doing real cloud work now - Azure Backup coverage across a two-subscription estate, Recovery Services
+                vaults, Bicep template VM deployments, SQL Managed Instance protection - on top of years of hands-on
+                administration: AD group access, MFA resets, MDM enrollments.
                 Runs a homelab where he learns by breaking things.
             </p>
         </section>
@@ -42,9 +43,11 @@
                     <span class="date">09/2026 - Present</span>
                 </div>
                 <ul>
+                    <li>Audited VM backup coverage across two managed Azure subscriptions and closed the gap: enabled Azure Backup on 16 unprotected VMs, raising coverage from 11 to 27 of 31 VMs, and verified the first recovery points landed.</li>
                     <li>Configured an Azure Recovery Services vault with a backup policy protecting a SQL Managed Instance (scheduled backups and retention).</li>
-                    <li>Deployed 10 virtual machines using a parameterized Bicep template, adapting the template to stamp out multiple VM configurations with unique names.</li>
-                    <li>Generated an SSH key pair and configured key-based authentication for secure access to the SQL Server VM during provisioning.</li>
+                    <li>Deployed 10 virtual machines using a parameterized Bicep template adapted to stamp out multiple VM configurations with unique names; configured SSH key-based authentication for the SQL Server VM during provisioning.</li>
+                    <li>Set up Azure Service Health alerting across both managed subscriptions (all services, regions, and event types) with a shared action group notifying the operations team.</li>
+                    <li>Wrote a report-only PowerShell audit of storage-account backup coverage across both subscriptions (all 5 accounts on native protection only, no vault backup); adopted into the team's IT toolkit.</li>
                 </ul>
             </article>
 
