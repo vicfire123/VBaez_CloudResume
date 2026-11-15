@@ -81,3 +81,19 @@ li {
 .project a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    .resume-container {
+        padding: 24px 16px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .resume-header h1 {
+        font-size: 2rem;
+    }
+}
