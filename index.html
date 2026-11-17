@@ -52,8 +52,9 @@
                     <li>Audited VM backup coverage across two managed Azure subscriptions and closed the gap: enabled Azure Backup on 16 unprotected VMs, raising coverage from 11 to 27 of 31 VMs, and verified the first recovery points landed.</li>
                     <li>Configured an Azure Recovery Services vault with a backup policy protecting a SQL Managed Instance (scheduled backups and retention).</li>
                     <li>Deployed 10 virtual machines using a parameterized Bicep template; configured SSH key-based authentication for secure access to the SQL Server VM during provisioning.</li>
-                    <li>Set up Azure Service Health alerting across both managed subscriptions (all services, regions, and event types) with a shared action group notifying the operations team.</li>
+                    <li>Set up Azure Service Health alerting across both managed subscriptions (all services, regions, and event types) with a shared action group.</li>
                     <li>Wrote a report-only PowerShell audit of storage-account backup coverage across both subscriptions (1 of 5 accounts vault-protected, the other 4 on native protection only); adopted into the team's IT toolkit.</li>
+                    <li>Built a report-only PowerShell cost-delta report (actuals vs forecast, per service) and ran it across both subscriptions; the first run explained a combined +$77.26 (+0.6%) change and isolated Azure Storage (+$441.85) as the largest mover.</li>
                 </ul>
             </article>
 
@@ -64,7 +65,7 @@
                     <span class="date">09/2023 - 09/2026</span>
                 </div>
                 <ul>
-                    <li>Supported a 100-device Intune mobile rollout, helping users enroll devices and working through setup issues.</li>
+                    <li>Supported a 100-device Intune mobile rollout, helping users enroll and resolve setup issues.</li>
                     <li>Helped drive a company-wide MFA enrollment push by guiding users through registration and resolving access problems.</li>
                     <li>Reworked day-to-day support workflows, cutting average ticket resolution time by 15%.</li>
                 </ul>
@@ -80,8 +81,6 @@
                     <li>Administered Active Directory and Azure AD user access, including group membership changes and account updates.</li>
                     <li>Reset MFA, resolved identity and access issues, and remotely enrolled corporate devices in MDM.</li>
                     <li>Resolved Tier II issues across Windows, Microsoft 365, OneDrive, SharePoint, and corporate endpoints.</li>
-                    <li>Imaged and provisioned bare-metal systems using PXE, OSD, and Microsoft Deployment Toolkit (MDT).</li>
-                    <li>Led English-to-Spanish translation of enterprise technical documentation.</li>
                 </ul>
             </article>
 
@@ -93,8 +92,6 @@
                 </div>
                 <ul>
                     <li>Supported the Tufts Medicine and Circle Health Epic Edge EHR transition, resolving endpoint and infrastructure dependencies during an on-premises-to-AWS migration.</li>
-                    <li>Deployed and supported SSO badge readers, point-of-sale systems, and networked displays.</li>
-                    <li>Handled Tier II diagnostics, network troubleshooting, and systems administration support.</li>
                 </ul>
             </article>
         </section>
@@ -104,22 +101,22 @@
 
             <article class="project">
                 <h3>Azure and M365 Automation Toolkit (PowerShell)</h3>
-                <p>Eight PowerShell scripts that audit Azure and Microsoft 365 environments for waste, backup coverage, and security drift: an orphaned-resource scanner that flags unattached disks, NICs, and public IPs with cost estimates and an HTML report; VM and storage-account backup coverage audits; an Entra ID security audit; stale Intune device detection; unused M365 license recovery; app secret and certificate expiry alerts; and stopped-service reporting - plus a helpdesk technician toolbox of batch and PowerShell utilities: Teams cache reset, share reconnector, disk space triage, sign-in loop fixer, network quick fix, and print queue reset. Built on the Az and Microsoft Graph modules, with -WhatIf and -Confirm safeguards on anything destructive.</p>
+                <p>Nine PowerShell scripts that audit Azure and Microsoft 365 environments for waste, backup coverage, cost, and security drift: orphaned-resource scanning with cost estimates and an HTML report; VM, storage-account, and cost-delta coverage audits; an Entra ID security audit; stale Intune device detection; unused M365 license recovery; app secret and certificate expiry alerts; and stopped-service reporting - plus a helpdesk technician toolbox of batch and PowerShell utilities: Teams cache reset, share reconnector, disk space triage, sign-in loop fixer, network quick fix, and print queue reset. Refactored the two largest scripts in Nov 2026 (Intune audit 941 to 514 lines, Azure audit 633 to 555) with explanation docs; three pre-existing bugs fixed, report-only safeguards intact. Built on the Az and Microsoft Graph modules, with -WhatIf and -Confirm safeguards on anything destructive.</p>
             </article>
 
             <article class="project">
                 <h3><a href="https://app.vbaez.dev" target="_blank" rel="noopener">PromptHired Pro</a> - Resume Scanning SaaS</h3>
-                <p>Production freemium SaaS designed, built, and deployed on Azure Static Web Apps with a custom domain. Node.js API backend with Clerk authentication (Google sign-in), live Stripe payments, and Anthropic API integration for AI resume scoring, cover letter generation, and headline optimization. Rate limiting across scan, AI, and checkout endpoints; free tier gated to scores and top issues, paid tier unlocks scan history and the generators.</p>
+                <p>Production freemium SaaS on Azure Static Web Apps with a custom domain. Node.js API with Clerk authentication (Google sign-in), live Stripe payments, and Anthropic API integration for AI resume scoring, cover letter generation, and headline optimization. Rate limiting across scan, AI, and checkout endpoints; free tier gated, paid tier unlocks history and the generators. Migrated authentication to Clerk production in Nov 2026 with live Stripe billing; production application submitted to Google Play the same month.</p>
             </article>
 
             <article class="project">
                 <h3>potofgreed - Home Server and Infrastructure Lab</h3>
-                <p>Ubuntu Server 24.04 on a Dell Latitude 7400, hardened with Ed25519 key-only SSH. Runs a Docker Compose stack - media automation, Nextcloud, Uptime Kuma monitoring - on a single-mount hardlink storage layout, plus a custom monitoring dashboard (FastAPI backend, nginx frontend) tracking host health and container status. Remote access over Tailscale only.</p>
+                <p>Ubuntu Server 24.04 on a Dell Latitude 7400, hardened with Ed25519 key-only SSH. Runs a Docker Compose stack (media automation, Nextcloud, Uptime Kuma), plus a custom FastAPI/nginx dashboard tracking host health and container status. Remote access over Tailscale only.</p>
             </article>
 
             <article class="project">
-                <h3>Local AI Stack</h3>
-                <p>Ollama and Open WebUI in Docker on an RTX 5070 (12GB), running Qwen3 14B and Gemma 4 locally for certification study, technical drafting, and coding assistance through Continue.dev in VS Code.</p>
+                <h3>AI Paper-Trading Bot</h3>
+                <p>Paper-trading system (Python, Docker, Alpaca API) running on a 60-minute cycle during market hours, with hard risk limits: max 3 positions, 25% per name, long only, daily and weekly loss halts, and a kill switch. Trades a $200 slice against a $200 SPY buy-and-hold control; 31 cage tests passed before live paper trading in Nov 2026.</p>
             </article>
         </section>
 
@@ -144,6 +141,11 @@
                 <article class="cert">
                     <h3>Microsoft Certified: Azure Fundamentals (AZ-900)</h3>
                     <p>Issued: 02/2026</p>
+                </article>
+
+                <article class="cert">
+                    <h3>Microsoft Certified: Identity and Access Administrator Associate (SC-300)</h3>
+                    <p>In progress, exam target: 02/2027</p>
                 </article>
 
                 <article class="degree">
